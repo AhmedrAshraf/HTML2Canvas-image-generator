@@ -1,5 +1,6 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import Link from "next/link";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -23,7 +24,23 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <div className="w-full bg-orange-400 flex justify-between px-16 py-6">
+          <h1 className="font-semibold">SMIT CARD PRINTER</h1>
+
+          <div className="gap-10 flex">
+            <Link href="/">Home</Link>
+            <Link href="/about">About</Link>
+            <Link href="/contact">Contact</Link>
+          </div>
+        </div>
+
         {children}
+
+        <div className="w-full bg-slate-600">
+          <p className="pt-32 pb-6 text-xl text-white text-center">
+            All right reserved SMIT@{new Date().getFullYear()}
+          </p>
+        </div>
       </body>
     </html>
   );
