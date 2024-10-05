@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="w-full bg-orange-400 flex justify-between px-16 py-6">
+        <div className="w-full bg-orange-500 flex justify-between px-16 py-6">
           <h1 className="font-semibold">SMIT CARD PRINTER</h1>
 
           <div className="gap-10 flex">
