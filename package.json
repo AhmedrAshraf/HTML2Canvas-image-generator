@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "axios": "^1.7.7",
+    "framer-motion": "^6.3.15",
     "html2canvas": "^1.4.1",
     "next": "14.2.14",
     "react": "^18",
