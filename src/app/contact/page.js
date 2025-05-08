@@ -56,7 +56,7 @@ export default function Contact() {
             <img
               src={user.image}
               alt={user.firstName}
-              className="w-16 h-16 rounded-full"
+              className="w-16 h-16 rounded-full shadow-md shadow-gray-600"
             />
             <div>
               <h2 className="font-semibold">
