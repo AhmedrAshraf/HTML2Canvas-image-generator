@@ -1,6 +1,7 @@
 "use client";
 
 import axios from "axios";
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -18,14 +19,16 @@ export default function Contact() {
   };
 
   return (
-    <div className="p-6 pb-20 gap-6">
-      <div className="flex justify-between">
-        <h1 className="font-bold mb-4">Users List</h1>
+    <div className={`p-6 pb-20 gap-6 ${
+      isDark ? "bg-slate-800" : "bg-slate-100"
+    }`} >
+      <div className="flex justify-between mb-6 ">
+        <h1 className={`font-bold mb-4 ${isDark ? "text-white" : "text-black"}`}>Users List</h1>
         <div className="flex justify-between gap-3 text-white">
           <button
             onClick={() => setIsDark(false)}
             className={`px-10 py2 rounded-md ${
-              !isDark ? "bg-slate-600" : "bg-slate-200"
+              !isDark ? "bg-black text-white" : "bg-slate-200 text-black"
             }`}
           >
             Light
@@ -33,7 +36,7 @@ export default function Contact() {
           <button
             onClick={() => setIsDark(true)}
             className={`px-10 py2 rounded-md ${
-              isDark ? "bg-slate-600" : "bg-slate-200"
+              isDark ? "bg-black text-white" : "bg-slate-200 text-black"
             } `}
           >
             Dark
@@ -42,10 +45,13 @@ export default function Contact() {
       </div>
 
       {users.map((user) => (
-        <Link href={`contact/${user.id}?darkmode=${isDark}`}>
+        <Link key={user.id} href={`contact/${user.id}?darkmode=${isDark}`}>
           <div
             key={user.id}
-            className="flex items-center gap-4 py-2 border-b border-black cursor-pointer hover:bg-slate-200"
+            className={`flex items-center gap-4 py-2 border-b border-black cursor-pointer hover:bg-slate-200 hover:text-black
+              ${
+                isDark ? "text-white" : "text-black"
+              }`}
           >
             <img
               src={user.image}

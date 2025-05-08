@@ -37,7 +37,7 @@ export default function RootLayout({ children }) {
         {children}
 
         <div className="w-full bg-slate-600">
-          <p className="pt-32 pb-6 text-xl text-white text-center">
+          <p className="pt-6 pb-6 text-xl text-white text-center">
             All right reserved SMIT@{new Date().getFullYear()}
           </p>
         </div>
