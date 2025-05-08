@@ -1,4 +1,5 @@
 "use client";
+// abc 
 
 import axios from "axios";
 import html2canvas from "html2canvas";
@@ -29,7 +30,7 @@ export default function Contact({ params: { id } }) {
 
   return (
     <div className="flex justify-center items-center flex-col py-28">
-      <h1 className="font-bold mb-4">User Card</h1>
+      <h1 className="font-bold text-[30px] mb-4">User Card</h1>
 
       <div
         ref={ref}
