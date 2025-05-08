@@ -24,10 +24,10 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="w-full bg-orange-500 flex justify-between px-16 py-6">
-          <h1 className="font-semibold">SMIT CARD PRINTER</h1>
+        <div className="w-full bg-black flex justify-between px-16 py-6 shadow-lg shadow-gray-100">
+          <h1 className="font-semibold text-white">SMIT CARD PRINTER</h1>
 
-          <div className="gap-10 flex">
+          <div className="gap-10 flex text-white">
             <Link href="/">Home</Link>
             <Link href="/about">About</Link>
             <Link href="/contact">Contact</Link>
@@ -37,7 +37,7 @@ export default function RootLayout({ children }) {
         {children}
 
         <div className="w-full bg-slate-600">
-          <p className="pt-32 pb-6 text-xl text-white text-center">
+          <p className="pt-6 pb-6 text-xl text-white text-center">
             All right reserved SMIT@{new Date().getFullYear()}
           </p>
         </div>
